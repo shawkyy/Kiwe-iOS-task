@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,9 +14,15 @@
 		566D4C98252B81710033D359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 566D4C97252B81710033D359 /* Assets.xcassets */; };
 		566D4C9B252B81710033D359 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 566D4C99252B81710033D359 /* LaunchScreen.storyboard */; };
 		566D4CA3252B81FE0033D359 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566D4CA2252B81FE0033D359 /* SideMenuViewController.swift */; };
+		566D4CA5252B8AAB0033D359 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566D4CA4252B8AAB0033D359 /* ProfileViewController.swift */; };
+		566D4CA7252B8C980033D359 /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566D4CA6252B8C980033D359 /* TermsAndConditionsViewController.swift */; };
+		7B88ADF68E0C8808D459E06E /* Pods_Kiwe_iOS_task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126879E6146583FF408A798A /* Pods_Kiwe_iOS_task.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		126879E6146583FF408A798A /* Pods_Kiwe_iOS_task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kiwe_iOS_task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D14486AF43ED90190D6B259 /* Pods-Kiwe iOS task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kiwe iOS task.release.xcconfig"; path = "Target Support Files/Pods-Kiwe iOS task/Pods-Kiwe iOS task.release.xcconfig"; sourceTree = "<group>"; };
+		4AD112703ED499E0F79A3D1C /* Pods-Kiwe iOS task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kiwe iOS task.debug.xcconfig"; path = "Target Support Files/Pods-Kiwe iOS task/Pods-Kiwe iOS task.debug.xcconfig"; sourceTree = "<group>"; };
 		566D4C8B252B81700033D359 /* Kiwe iOS task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kiwe iOS task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		566D4C8E252B81700033D359 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		566D4C90252B81700033D359 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +32,8 @@
 		566D4C9A252B81710033D359 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		566D4C9C252B81710033D359 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		566D4CA2252B81FE0033D359 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		566D4CA4252B8AAB0033D359 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		566D4CA6252B8C980033D359 /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B88ADF68E0C8808D459E06E /* Pods_Kiwe_iOS_task.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33423A7ECA42287657F4A37F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				126879E6146583FF408A798A /* Pods_Kiwe_iOS_task.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		566D4C82252B81700033D359 = {
 			isa = PBXGroup;
 			children = (
 				566D4C8D252B81700033D359 /* Kiwe iOS task */,
 				566D4C8C252B81700033D359 /* Products */,
+				644CF83EA0D44284B96980D7 /* Pods */,
+				33423A7ECA42287657F4A37F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +80,8 @@
 				566D4C8E252B81700033D359 /* AppDelegate.swift */,
 				566D4C90252B81700033D359 /* SceneDelegate.swift */,
 				566D4CA2252B81FE0033D359 /* SideMenuViewController.swift */,
+				566D4CA4252B8AAB0033D359 /* ProfileViewController.swift */,
+				566D4CA6252B8C980033D359 /* TermsAndConditionsViewController.swift */,
 				566D4C92252B81700033D359 /* HomeViewController.swift */,
 				566D4C94252B81700033D359 /* Main.storyboard */,
 				566D4C97252B81710033D359 /* Assets.xcassets */,
@@ -70,6 +91,15 @@
 			path = "Kiwe iOS task";
 			sourceTree = "<group>";
 		};
+		644CF83EA0D44284B96980D7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4AD112703ED499E0F79A3D1C /* Pods-Kiwe iOS task.debug.xcconfig */,
+				3D14486AF43ED90190D6B259 /* Pods-Kiwe iOS task.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 566D4C9F252B81710033D359 /* Build configuration list for PBXNativeTarget "Kiwe iOS task" */;
 			buildPhases = (
+				71CE3058587AAF55EC640B87 /* [CP] Check Pods Manifest.lock */,
 				566D4C87252B81700033D359 /* Sources */,
 				566D4C88252B81700033D359 /* Frameworks */,
 				566D4C89252B81700033D359 /* Resources */,
+				8260F96706744B2133F7D4DE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,6 +168,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		71CE3058587AAF55EC640B87 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kiwe iOS task-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8260F96706744B2133F7D4DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kiwe iOS task/Pods-Kiwe iOS task-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kiwe iOS task/Pods-Kiwe iOS task-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kiwe iOS task/Pods-Kiwe iOS task-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		566D4C87252B81700033D359 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -143,6 +217,8 @@
 			files = (
 				566D4CA3252B81FE0033D359 /* SideMenuViewController.swift in Sources */,
 				566D4C93252B81700033D359 /* HomeViewController.swift in Sources */,
+				566D4CA7252B8C980033D359 /* TermsAndConditionsViewController.swift in Sources */,
+				566D4CA5252B8AAB0033D359 /* ProfileViewController.swift in Sources */,
 				566D4C8F252B81700033D359 /* AppDelegate.swift in Sources */,
 				566D4C91252B81700033D359 /* SceneDelegate.swift in Sources */,
 			);
@@ -286,6 +362,7 @@
 		};
 		566D4CA0252B81710033D359 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AD112703ED499E0F79A3D1C /* Pods-Kiwe iOS task.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,6 +381,7 @@
 		};
 		566D4CA1252B81710033D359 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D14486AF43ED90190D6B259 /* Pods-Kiwe iOS task.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

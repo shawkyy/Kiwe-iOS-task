@@ -7,13 +7,24 @@
 //
 
 import UIKit
+import SideMenu
 
 class HomeViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
+    @IBAction func sideMenuButtonDidTap(_ sender: Any) {
+        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SideMenuViewController") as! SideMenuViewController
+        let menu = SideMenuNavigationController(rootViewController: viewController)
+        menu.leftSide = true
+        menu.statusBarEndAlpha = 0
+        menu.navigationBar.isHidden = true
+        menu.dismissOnPresent = true
+        menu.dismissOnPush = true
+        present(menu, animated: true, completion: nil)
+    }
 }
 

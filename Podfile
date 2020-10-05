@@ -5,6 +5,9 @@ target 'Kiwe iOS task' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for Kiwe iOS task
+# UI libraries
+
+  pod 'SideMenu', '~> 6.4.8'
+
 
 end

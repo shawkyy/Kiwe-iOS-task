@@ -8,23 +8,33 @@
 
 import UIKit
 
-class SideMenuViewController: UIViewController {
+class SideMenuViewController: UITableViewController {
 
+    @IBOutlet var sideMenuTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        sideMenuButtonDidTap(indexPath.row)
     }
-    */
-
+    
+    private func sideMenuButtonDidTap(_ selection:Int){
+        switch selection {
+        case 0:
+            dismiss(animated: true, completion: nil)
+        case 1:
+            let homeViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileViewController")
+            self.navigationController?.pushViewController(homeViewController, animated: true)
+        case 2:
+            break
+        case 3:
+            break
+        default:
+            break
+        }
+    }
+    
 }
