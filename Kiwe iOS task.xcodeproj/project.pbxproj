@@ -16,6 +16,9 @@
 		566D4CA3252B81FE0033D359 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566D4CA2252B81FE0033D359 /* SideMenuViewController.swift */; };
 		566D4CA5252B8AAB0033D359 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566D4CA4252B8AAB0033D359 /* ProfileViewController.swift */; };
 		566D4CA7252B8C980033D359 /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566D4CA6252B8C980033D359 /* TermsAndConditionsViewController.swift */; };
+		566D4CAB252B986F0033D359 /* PlacesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566D4CAA252B986F0033D359 /* PlacesDataSource.swift */; };
+		566D4CAD252B98BF0033D359 /* PlacesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566D4CAC252B98BF0033D359 /* PlacesResponse.swift */; };
+		566D4CAF252B9A660033D359 /* PlacesUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566D4CAE252B9A660033D359 /* PlacesUseCases.swift */; };
 		7B88ADF68E0C8808D459E06E /* Pods_Kiwe_iOS_task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126879E6146583FF408A798A /* Pods_Kiwe_iOS_task.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +37,9 @@
 		566D4CA2252B81FE0033D359 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		566D4CA4252B8AAB0033D359 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		566D4CA6252B8C980033D359 /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
+		566D4CAA252B986F0033D359 /* PlacesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesDataSource.swift; sourceTree = "<group>"; };
+		566D4CAC252B98BF0033D359 /* PlacesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesResponse.swift; sourceTree = "<group>"; };
+		566D4CAE252B9A660033D359 /* PlacesUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesUseCases.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,8 @@
 		566D4C8D252B81700033D359 /* Kiwe iOS task */ = {
 			isa = PBXGroup;
 			children = (
+				566D4CA9252B96C10033D359 /* UseCases */,
+				566D4CA8252B96AC0033D359 /* Data source */,
 				566D4C8E252B81700033D359 /* AppDelegate.swift */,
 				566D4C90252B81700033D359 /* SceneDelegate.swift */,
 				566D4CA2252B81FE0033D359 /* SideMenuViewController.swift */,
@@ -87,8 +95,25 @@
 				566D4C97252B81710033D359 /* Assets.xcassets */,
 				566D4C99252B81710033D359 /* LaunchScreen.storyboard */,
 				566D4C9C252B81710033D359 /* Info.plist */,
+				566D4CAC252B98BF0033D359 /* PlacesResponse.swift */,
 			);
 			path = "Kiwe iOS task";
+			sourceTree = "<group>";
+		};
+		566D4CA8252B96AC0033D359 /* Data source */ = {
+			isa = PBXGroup;
+			children = (
+				566D4CAA252B986F0033D359 /* PlacesDataSource.swift */,
+			);
+			path = "Data source";
+			sourceTree = "<group>";
+		};
+		566D4CA9252B96C10033D359 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				566D4CAE252B9A660033D359 /* PlacesUseCases.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 		644CF83EA0D44284B96980D7 /* Pods */ = {
@@ -217,9 +242,12 @@
 			files = (
 				566D4CA3252B81FE0033D359 /* SideMenuViewController.swift in Sources */,
 				566D4C93252B81700033D359 /* HomeViewController.swift in Sources */,
+				566D4CAF252B9A660033D359 /* PlacesUseCases.swift in Sources */,
+				566D4CAB252B986F0033D359 /* PlacesDataSource.swift in Sources */,
 				566D4CA7252B8C980033D359 /* TermsAndConditionsViewController.swift in Sources */,
 				566D4CA5252B8AAB0033D359 /* ProfileViewController.swift in Sources */,
 				566D4C8F252B81700033D359 /* AppDelegate.swift in Sources */,
+				566D4CAD252B98BF0033D359 /* PlacesResponse.swift in Sources */,
 				566D4C91252B81700033D359 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

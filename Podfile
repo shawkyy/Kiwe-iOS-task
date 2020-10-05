@@ -6,8 +6,11 @@ target 'Kiwe iOS task' do
   use_frameworks!
 
 # UI libraries
-
   pod 'SideMenu', '~> 6.4.8'
+  pod 'IQKeyboardManagerSwift', '6.3.0'
+  pod 'PKHUD', '~> 5.3.0'
 
+# Networking libraries
+pod 'Moya/RxSwift', '~> 14.0'
 
 end
