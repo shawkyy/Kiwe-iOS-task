@@ -108,8 +108,8 @@ class LoginAndRegisterViewController: UIViewController {
             let age = ageTextField.text, !age.isEmpty,
             let email = registerEmailTextField.text, !email.isEmpty
             else {return}
-        //validate password
         viewModel.registerUser(userName: name, password: password, age: age, email: email)
+        viewModel.saveUserEmail(email:email)
         navigateToHome()
     }
 }

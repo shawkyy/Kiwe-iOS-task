@@ -161,7 +161,6 @@
 				5616E978252C9288001B3A52 /* Terms and conditions */,
 				5616E976252C9259001B3A52 /* SideMenu */,
 				5616E973252C920F001B3A52 /* Profile */,
-				56F2704F252C737300960CB3 /* ViewModel */,
 				56F27048252C017300960CB3 /* Login and Registration */,
 				563910CA252BB1FA00169EDA /* Home */,
 			);
@@ -293,6 +292,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		56A22BF7252CAF68007C3C1B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				56F27049252C01D500960CB3 /* LoginAndRegisterViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		56A22BF8252CAF75007C3C1B /* ScreenData */ = {
+			isa = PBXGroup;
+			children = (
+				56F27052252C752700960CB3 /* LoginScreenState.swift */,
+			);
+			path = ScreenData;
+			sourceTree = "<group>";
+		};
 		56D09D7B252C95F10025A043 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,8 +319,9 @@
 		56F27048252C017300960CB3 /* Login and Registration */ = {
 			isa = PBXGroup;
 			children = (
-				56F27049252C01D500960CB3 /* LoginAndRegisterViewController.swift */,
-				56F27052252C752700960CB3 /* LoginScreenState.swift */,
+				56A22BF8252CAF75007C3C1B /* ScreenData */,
+				56A22BF7252CAF68007C3C1B /* ViewController */,
+				56F2704F252C737300960CB3 /* ViewModel */,
 			);
 			path = "Login and Registration";
 			sourceTree = "<group>";
