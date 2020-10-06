@@ -1,30 +1,51 @@
 PODS:
   - Alamofire (5.2.1)
+  - GoogleMaps (3.9.0):
+    - GoogleMaps/Maps (= 3.9.0)
+  - GoogleMaps/Base (3.9.0)
+  - GoogleMaps/Maps (3.9.0):
+    - GoogleMaps/Base
+  - GooglePlaces (3.9.0):
+    - GoogleMaps/Base (= 3.9.0)
+  - IQKeyboardManagerSwift (6.3.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
   - Moya/RxSwift (14.0.0):
     - Moya/Core
     - RxSwift (~> 5.0)
+  - PKHUD (5.3.0)
   - RxSwift (5.1.1)
   - SideMenu (6.4.8)
 
 DEPENDENCIES:
+  - GoogleMaps
+  - GooglePlaces
+  - IQKeyboardManagerSwift (= 6.3.0)
   - Moya/RxSwift (~> 14.0)
+  - PKHUD (~> 5.3.0)
   - SideMenu (~> 6.4.8)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - GoogleMaps
+    - GooglePlaces
+    - IQKeyboardManagerSwift
     - Moya
+    - PKHUD
     - RxSwift
     - SideMenu
 
 SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  GoogleMaps: 4b5346bddfe6911bb89155d43c903020170523ac
+  GooglePlaces: 1634d019549b969d40fe0ccb0b9513055adebe01
+  IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SideMenu: 4a891be552d30bb6fa87ad404d62e485f8450c34
 
-PODFILE CHECKSUM: 888a9efa6713c7b37df755902156afcb0afac1d0
+PODFILE CHECKSUM: 17766f597d55a5c1fd354ab56943ffc7a21204b4
 
 COCOAPODS: 1.9.1

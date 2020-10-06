@@ -13,4 +13,8 @@ target 'Kiwe iOS task' do
 # Networking libraries
 pod 'Moya/RxSwift', '~> 14.0'
 
+#Maps library
+pod 'GoogleMaps', '3.9.0'
+pod 'GooglePlaces', '3.9.0'
+
 end

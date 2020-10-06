@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		563910C5252BACA600169EDA /* PlacesApis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563910C4252BACA600169EDA /* PlacesApis.swift */; };
+		563910C7252BAD0E00169EDA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563910C6252BAD0E00169EDA /* Constants.swift */; };
+		563910CD252BB21A00169EDA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563910CC252BB21A00169EDA /* HomeViewModel.swift */; };
+		563910CF252BB28D00169EDA /* HomeScreenState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563910CE252BB28D00169EDA /* HomeScreenState.swift */; };
 		566D4C8F252B81700033D359 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566D4C8E252B81700033D359 /* AppDelegate.swift */; };
 		566D4C91252B81700033D359 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566D4C90252B81700033D359 /* SceneDelegate.swift */; };
 		566D4C93252B81700033D359 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566D4C92252B81700033D359 /* HomeViewController.swift */; };
@@ -19,6 +23,10 @@
 		566D4CAB252B986F0033D359 /* PlacesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566D4CAA252B986F0033D359 /* PlacesDataSource.swift */; };
 		566D4CAD252B98BF0033D359 /* PlacesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566D4CAC252B98BF0033D359 /* PlacesResponse.swift */; };
 		566D4CAF252B9A660033D359 /* PlacesUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566D4CAE252B9A660033D359 /* PlacesUseCases.swift */; };
+		566D4CB1252B9B210033D359 /* MoyaPlacesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566D4CB0252B9B210033D359 /* MoyaPlacesDataSource.swift */; };
+		56F27043252BCC8000960CB3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F27042252BCC8000960CB3 /* MapViewController.swift */; };
+		56F27046252BD42C00960CB3 /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F27044252BD42C00960CB3 /* PlaceTableViewCell.swift */; };
+		56F27047252BD42C00960CB3 /* PlaceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56F27045252BD42C00960CB3 /* PlaceTableViewCell.xib */; };
 		7B88ADF68E0C8808D459E06E /* Pods_Kiwe_iOS_task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126879E6146583FF408A798A /* Pods_Kiwe_iOS_task.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +34,10 @@
 		126879E6146583FF408A798A /* Pods_Kiwe_iOS_task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kiwe_iOS_task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D14486AF43ED90190D6B259 /* Pods-Kiwe iOS task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kiwe iOS task.release.xcconfig"; path = "Target Support Files/Pods-Kiwe iOS task/Pods-Kiwe iOS task.release.xcconfig"; sourceTree = "<group>"; };
 		4AD112703ED499E0F79A3D1C /* Pods-Kiwe iOS task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kiwe iOS task.debug.xcconfig"; path = "Target Support Files/Pods-Kiwe iOS task/Pods-Kiwe iOS task.debug.xcconfig"; sourceTree = "<group>"; };
+		563910C4252BACA600169EDA /* PlacesApis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesApis.swift; sourceTree = "<group>"; };
+		563910C6252BAD0E00169EDA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		563910CC252BB21A00169EDA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		563910CE252BB28D00169EDA /* HomeScreenState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenState.swift; sourceTree = "<group>"; };
 		566D4C8B252B81700033D359 /* Kiwe iOS task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kiwe iOS task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		566D4C8E252B81700033D359 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		566D4C90252B81700033D359 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +52,10 @@
 		566D4CAA252B986F0033D359 /* PlacesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesDataSource.swift; sourceTree = "<group>"; };
 		566D4CAC252B98BF0033D359 /* PlacesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesResponse.swift; sourceTree = "<group>"; };
 		566D4CAE252B9A660033D359 /* PlacesUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesUseCases.swift; sourceTree = "<group>"; };
+		566D4CB0252B9B210033D359 /* MoyaPlacesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaPlacesDataSource.swift; sourceTree = "<group>"; };
+		56F27042252BCC8000960CB3 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		56F27044252BD42C00960CB3 /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
+		56F27045252BD42C00960CB3 /* PlaceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +76,40 @@
 				126879E6146583FF408A798A /* Pods_Kiwe_iOS_task.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		563910C8252BB1E100169EDA /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				563910CA252BB1FA00169EDA /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		563910C9252BB1F000169EDA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				566D4C92252B81700033D359 /* HomeViewController.swift */,
+				563910CE252BB28D00169EDA /* HomeScreenState.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		563910CA252BB1FA00169EDA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				563910CB252BB20A00169EDA /* ViewModel */,
+				563910C9252BB1F000169EDA /* ViewController */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		563910CB252BB20A00169EDA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				563910CC252BB21A00169EDA /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		566D4C82252B81700033D359 = {
@@ -83,19 +133,22 @@
 		566D4C8D252B81700033D359 /* Kiwe iOS task */ = {
 			isa = PBXGroup;
 			children = (
-				566D4CA9252B96C10033D359 /* UseCases */,
-				566D4CA8252B96AC0033D359 /* Data source */,
+				566D4CB5252B9BBC0033D359 /* Domain */,
+				566D4CB2252B9B920033D359 /* Data */,
+				563910C8252BB1E100169EDA /* Modules */,
 				566D4C8E252B81700033D359 /* AppDelegate.swift */,
 				566D4C90252B81700033D359 /* SceneDelegate.swift */,
 				566D4CA2252B81FE0033D359 /* SideMenuViewController.swift */,
 				566D4CA4252B8AAB0033D359 /* ProfileViewController.swift */,
 				566D4CA6252B8C980033D359 /* TermsAndConditionsViewController.swift */,
-				566D4C92252B81700033D359 /* HomeViewController.swift */,
 				566D4C94252B81700033D359 /* Main.storyboard */,
+				56F27042252BCC8000960CB3 /* MapViewController.swift */,
 				566D4C97252B81710033D359 /* Assets.xcassets */,
 				566D4C99252B81710033D359 /* LaunchScreen.storyboard */,
 				566D4C9C252B81710033D359 /* Info.plist */,
-				566D4CAC252B98BF0033D359 /* PlacesResponse.swift */,
+				563910C6252BAD0E00169EDA /* Constants.swift */,
+				56F27044252BD42C00960CB3 /* PlaceTableViewCell.swift */,
+				56F27045252BD42C00960CB3 /* PlaceTableViewCell.xib */,
 			);
 			path = "Kiwe iOS task";
 			sourceTree = "<group>";
@@ -114,6 +167,49 @@
 				566D4CAE252B9A660033D359 /* PlacesUseCases.swift */,
 			);
 			path = UseCases;
+			sourceTree = "<group>";
+		};
+		566D4CB2252B9B920033D359 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				566D4CA8252B96AC0033D359 /* Data source */,
+				566D4CB4252B9BA60033D359 /* Remote */,
+				566D4CB3252B9BA20033D359 /* Local */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		566D4CB3252B9BA20033D359 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		566D4CB4252B9BA60033D359 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				566D4CB0252B9B210033D359 /* MoyaPlacesDataSource.swift */,
+				563910C4252BACA600169EDA /* PlacesApis.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		566D4CB5252B9BBC0033D359 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				566D4CB6252B9BE30033D359 /* Model */,
+				566D4CA9252B96C10033D359 /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		566D4CB6252B9BE30033D359 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				566D4CAC252B98BF0033D359 /* PlacesResponse.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		644CF83EA0D44284B96980D7 /* Pods */ = {
@@ -137,6 +233,7 @@
 				566D4C88252B81700033D359 /* Frameworks */,
 				566D4C89252B81700033D359 /* Resources */,
 				8260F96706744B2133F7D4DE /* [CP] Embed Pods Frameworks */,
+				7B45447B413A5A6D781B9862 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,6 +285,7 @@
 				566D4C9B252B81710033D359 /* LaunchScreen.storyboard in Resources */,
 				566D4C98252B81710033D359 /* Assets.xcassets in Resources */,
 				566D4C96252B81700033D359 /* Main.storyboard in Resources */,
+				56F27047252BD42C00960CB3 /* PlaceTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +314,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		7B45447B413A5A6D781B9862 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kiwe iOS task/Pods-Kiwe iOS task-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kiwe iOS task/Pods-Kiwe iOS task-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kiwe iOS task/Pods-Kiwe iOS task-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8260F96706744B2133F7D4DE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -242,13 +357,20 @@
 			files = (
 				566D4CA3252B81FE0033D359 /* SideMenuViewController.swift in Sources */,
 				566D4C93252B81700033D359 /* HomeViewController.swift in Sources */,
+				563910CF252BB28D00169EDA /* HomeScreenState.swift in Sources */,
 				566D4CAF252B9A660033D359 /* PlacesUseCases.swift in Sources */,
 				566D4CAB252B986F0033D359 /* PlacesDataSource.swift in Sources */,
 				566D4CA7252B8C980033D359 /* TermsAndConditionsViewController.swift in Sources */,
 				566D4CA5252B8AAB0033D359 /* ProfileViewController.swift in Sources */,
+				566D4CB1252B9B210033D359 /* MoyaPlacesDataSource.swift in Sources */,
 				566D4C8F252B81700033D359 /* AppDelegate.swift in Sources */,
+				563910CD252BB21A00169EDA /* HomeViewModel.swift in Sources */,
+				563910C5252BACA600169EDA /* PlacesApis.swift in Sources */,
+				56F27046252BD42C00960CB3 /* PlaceTableViewCell.swift in Sources */,
 				566D4CAD252B98BF0033D359 /* PlacesResponse.swift in Sources */,
 				566D4C91252B81700033D359 /* SceneDelegate.swift in Sources */,
+				56F27043252BCC8000960CB3 /* MapViewController.swift in Sources */,
+				563910C7252BAD0E00169EDA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
