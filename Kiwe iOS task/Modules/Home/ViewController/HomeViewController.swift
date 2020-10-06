@@ -8,15 +8,17 @@
 
 import UIKit
 import SideMenu
-import CoreLocation
 import GoogleMaps
+import RxSwift
+import PKHUD
+import Kingfisher
 
-enum HomeScreenSelection{
+private enum ScreenSelection{
     case Places
     case Map
 }
 
-class HomeViewController: UIViewController, CLLocationManagerDelegate {
+class HomeViewController: UIViewController {
     
     @IBOutlet weak var placesTableView: UITableView!
     @IBOutlet weak var mapParentView: UIView!
@@ -27,7 +29,10 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     private var latitude : Double?
     private  var longitude : Double?
     private let viewModel = HomeViewModel()
-    private var homeScreenSelection: HomeScreenSelection = .Places {
+    private let disposeBag = DisposeBag()
+    private var places = [Venue]()
+    var userName:String?
+    private var screenSelection: ScreenSelection = .Places {
         didSet {
             handleScreenSelection()
         }
@@ -35,32 +40,53 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setSubscribers()
         locationManager.requestWhenInUseAuthorization()
         configureTableView()
-        configureMapView()
-        locationManager.delegate = self
         handleScreenSelection()
-        getUserLocation()
-        guard let latitude = latitude, let longitude = longitude else {return}
-                viewModel.getPlaces(latitude: "\(latitude)", longitude: "\(longitude)")
+        viewModel.getPlaces()
+    }
+    
+    private func setSubscribers(){
+        viewModel.homeStateBehaviorSubject.subscribe(onNext: { screenState in
+            self.handleScreenState(screenState)
+        }).disposed(by: disposeBag)
+    }
+    
+    private func handleScreenState(_ screenState: HomeScreenState){
+        switch screenState {
+        case .Failure:
+            //handle failure
+            HUD.show(.progress)
+        case.Loading:
+            HUD.show(.progress)
+        case.Success(places: let places):
+            self.places = places
+            self.placesTableView.reloadData()
+            configureMapView()
+            HUD.hide()
+        }
     }
     
     private func configureMapView(){
         GMSServices.provideAPIKey("AIzaSyAlfYIoxo6mzDTh2eY7UbLE58GjgGiyENo")
-
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
-        
+        let lng = places[0].location.lng
+        let lat = places[0].location.lat
+        let camera = GMSCameraPosition.camera(withLatitude: lat, longitude: lng, zoom: 17.0)
         let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
         mapView.delegate = self
         self.mapParentView.addSubview(mapView)
         
-        // Creates a marker in the center of the map.
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-        marker.appearAnimation = .pop
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
-        marker.map = mapView
+        for place in places{
+            let marker = GMSMarker()
+            marker.position = CLLocationCoordinate2D(latitude: place.location.lat, longitude: place.location.lng)
+            marker.appearAnimation = .pop
+            marker.title = place.name
+            if !place.categories.isEmpty{
+                marker.snippet = place.categories[0].name
+            }
+            marker.map = mapView
+        }
     }
     
     private func configureTableView(){
@@ -69,7 +95,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     private func handleScreenSelection(){
-        switch homeScreenSelection{
+        switch screenSelection{
         case .Map:
             mapParentView.isHidden = false
             mapSeparator.backgroundColor = .darkGray
@@ -81,29 +107,12 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-    func getUserLocation(){
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            locationManager.startUpdatingLocation()
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-        // set the value of lat and long
-        latitude = location.latitude
-        longitude = location.longitude
-
-        
-    }
-    
-    
     @IBAction func placesButtonDidTap(_ sender: Any) {
-        homeScreenSelection = .Places
+        screenSelection = .Places
     }
     
     @IBAction func mapButtonDidTap(_ sender: Any) {
-        homeScreenSelection = .Map
+        screenSelection = .Map
     }
     
     @IBAction func sideMenuButtonDidTap(_ sender: Any) {
@@ -120,15 +129,21 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
 
 extension HomeViewController:UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        4
+        places.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PlaceTableViewCell.identifier, for: indexPath) as? PlaceTableViewCell else{return UITableViewCell()}
-        cell.categoryName.text = "shawky"
+        let place = places[indexPath.row]
+        cell.placeName.text = place.name
+        if !place.categories.isEmpty{
+            cell.categoryName.text = place.categories[0].name
+            //
+            cell.categoryImage.kf.setImage(with: URL(string: "\(place.categories[0].icon.iconPrefix)64.png"))
+        }
+        
         return cell
     }
-    
     
 }
 

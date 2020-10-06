@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PlaceTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var placeName: UILabel!
     @IBOutlet weak var placeLocation: UILabel!
     @IBOutlet weak var categoryName: UILabel!
@@ -17,15 +18,15 @@ class PlaceTableViewCell: UITableViewCell {
     
     static let nibName = "PlaceTableViewCell"
     static let identifier = "PlaceTableViewCell"
+    var imageFromWeb = ""
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
+        categoryImage.kf.setImage(with: URL(string: "\(imageFromWeb)"))  }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     

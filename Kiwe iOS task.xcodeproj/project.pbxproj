@@ -24,9 +24,15 @@
 		566D4CAD252B98BF0033D359 /* PlacesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566D4CAC252B98BF0033D359 /* PlacesResponse.swift */; };
 		566D4CAF252B9A660033D359 /* PlacesUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566D4CAE252B9A660033D359 /* PlacesUseCases.swift */; };
 		566D4CB1252B9B210033D359 /* MoyaPlacesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566D4CB0252B9B210033D359 /* MoyaPlacesDataSource.swift */; };
-		56F27043252BCC8000960CB3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F27042252BCC8000960CB3 /* MapViewController.swift */; };
+		56D09D7A252C95EC0025A043 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D09D79252C95EC0025A043 /* ProfileViewModel.swift */; };
+		56D09D7D252C96000025A043 /* ProfileUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D09D7C252C96000025A043 /* ProfileUseCases.swift */; };
 		56F27046252BD42C00960CB3 /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F27044252BD42C00960CB3 /* PlaceTableViewCell.swift */; };
 		56F27047252BD42C00960CB3 /* PlaceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56F27045252BD42C00960CB3 /* PlaceTableViewCell.xib */; };
+		56F2704A252C01D500960CB3 /* LoginAndRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F27049252C01D500960CB3 /* LoginAndRegisterViewController.swift */; };
+		56F2704C252C6FBD00960CB3 /* LocalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F2704B252C6FBD00960CB3 /* LocalData.swift */; };
+		56F2704E252C72EB00960CB3 /* LoginUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F2704D252C72EB00960CB3 /* LoginUseCases.swift */; };
+		56F27051252C737E00960CB3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F27050252C737E00960CB3 /* LoginViewModel.swift */; };
+		56F27053252C752700960CB3 /* LoginScreenState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F27052252C752700960CB3 /* LoginScreenState.swift */; };
 		7B88ADF68E0C8808D459E06E /* Pods_Kiwe_iOS_task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126879E6146583FF408A798A /* Pods_Kiwe_iOS_task.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,9 +59,15 @@
 		566D4CAC252B98BF0033D359 /* PlacesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesResponse.swift; sourceTree = "<group>"; };
 		566D4CAE252B9A660033D359 /* PlacesUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesUseCases.swift; sourceTree = "<group>"; };
 		566D4CB0252B9B210033D359 /* MoyaPlacesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaPlacesDataSource.swift; sourceTree = "<group>"; };
-		56F27042252BCC8000960CB3 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		56D09D79252C95EC0025A043 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		56D09D7C252C96000025A043 /* ProfileUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUseCases.swift; sourceTree = "<group>"; };
 		56F27044252BD42C00960CB3 /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
 		56F27045252BD42C00960CB3 /* PlaceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceTableViewCell.xib; sourceTree = "<group>"; };
+		56F27049252C01D500960CB3 /* LoginAndRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAndRegisterViewController.swift; sourceTree = "<group>"; };
+		56F2704B252C6FBD00960CB3 /* LocalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalData.swift; sourceTree = "<group>"; };
+		56F2704D252C72EB00960CB3 /* LoginUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCases.swift; sourceTree = "<group>"; };
+		56F27050252C737E00960CB3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		56F27052252C752700960CB3 /* LoginScreenState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,9 +90,79 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5616E972252C91B7001B3A52 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5616E973252C920F001B3A52 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				56D09D7B252C95F10025A043 /* ViewModel */,
+				5616E974252C9218001B3A52 /* ViewController */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		5616E974252C9218001B3A52 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				566D4CA4252B8AAB0033D359 /* ProfileViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5616E975252C923F001B3A52 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				56F27044252BD42C00960CB3 /* PlaceTableViewCell.swift */,
+				56F27045252BD42C00960CB3 /* PlaceTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		5616E976252C9259001B3A52 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				5616E977252C9266001B3A52 /* ViewController */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		5616E977252C9266001B3A52 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				566D4CA2252B81FE0033D359 /* SideMenuViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5616E978252C9288001B3A52 /* Terms and conditions */ = {
+			isa = PBXGroup;
+			children = (
+				5616E979252C9298001B3A52 /* ViewController */,
+			);
+			path = "Terms and conditions";
+			sourceTree = "<group>";
+		};
+		5616E979252C9298001B3A52 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				566D4CA6252B8C980033D359 /* TermsAndConditionsViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		563910C8252BB1E100169EDA /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5616E978252C9288001B3A52 /* Terms and conditions */,
+				5616E976252C9259001B3A52 /* SideMenu */,
+				5616E973252C920F001B3A52 /* Profile */,
+				56F2704F252C737300960CB3 /* ViewModel */,
+				56F27048252C017300960CB3 /* Login and Registration */,
 				563910CA252BB1FA00169EDA /* Home */,
 			);
 			path = Modules;
@@ -116,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				566D4C8D252B81700033D359 /* Kiwe iOS task */,
+				5616E972252C91B7001B3A52 /* Resources */,
 				566D4C8C252B81700033D359 /* Products */,
 				644CF83EA0D44284B96980D7 /* Pods */,
 				33423A7ECA42287657F4A37F /* Frameworks */,
@@ -136,19 +219,14 @@
 				566D4CB5252B9BBC0033D359 /* Domain */,
 				566D4CB2252B9B920033D359 /* Data */,
 				563910C8252BB1E100169EDA /* Modules */,
+				5616E975252C923F001B3A52 /* Cells */,
 				566D4C8E252B81700033D359 /* AppDelegate.swift */,
 				566D4C90252B81700033D359 /* SceneDelegate.swift */,
-				566D4CA2252B81FE0033D359 /* SideMenuViewController.swift */,
-				566D4CA4252B8AAB0033D359 /* ProfileViewController.swift */,
-				566D4CA6252B8C980033D359 /* TermsAndConditionsViewController.swift */,
 				566D4C94252B81700033D359 /* Main.storyboard */,
-				56F27042252BCC8000960CB3 /* MapViewController.swift */,
 				566D4C97252B81710033D359 /* Assets.xcassets */,
-				566D4C99252B81710033D359 /* LaunchScreen.storyboard */,
 				566D4C9C252B81710033D359 /* Info.plist */,
+				566D4C99252B81710033D359 /* LaunchScreen.storyboard */,
 				563910C6252BAD0E00169EDA /* Constants.swift */,
-				56F27044252BD42C00960CB3 /* PlaceTableViewCell.swift */,
-				56F27045252BD42C00960CB3 /* PlaceTableViewCell.xib */,
 			);
 			path = "Kiwe iOS task";
 			sourceTree = "<group>";
@@ -165,6 +243,8 @@
 			isa = PBXGroup;
 			children = (
 				566D4CAE252B9A660033D359 /* PlacesUseCases.swift */,
+				56F2704D252C72EB00960CB3 /* LoginUseCases.swift */,
+				56D09D7C252C96000025A043 /* ProfileUseCases.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -182,6 +262,7 @@
 		566D4CB3252B9BA20033D359 /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				56F2704B252C6FBD00960CB3 /* LocalData.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -210,6 +291,31 @@
 				566D4CAC252B98BF0033D359 /* PlacesResponse.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		56D09D7B252C95F10025A043 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				56D09D79252C95EC0025A043 /* ProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		56F27048252C017300960CB3 /* Login and Registration */ = {
+			isa = PBXGroup;
+			children = (
+				56F27049252C01D500960CB3 /* LoginAndRegisterViewController.swift */,
+				56F27052252C752700960CB3 /* LoginScreenState.swift */,
+			);
+			path = "Login and Registration";
+			sourceTree = "<group>";
+		};
+		56F2704F252C737300960CB3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				56F27050252C737E00960CB3 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		644CF83EA0D44284B96980D7 /* Pods */ = {
@@ -358,19 +464,25 @@
 				566D4CA3252B81FE0033D359 /* SideMenuViewController.swift in Sources */,
 				566D4C93252B81700033D359 /* HomeViewController.swift in Sources */,
 				563910CF252BB28D00169EDA /* HomeScreenState.swift in Sources */,
+				56F2704E252C72EB00960CB3 /* LoginUseCases.swift in Sources */,
+				56F27053252C752700960CB3 /* LoginScreenState.swift in Sources */,
 				566D4CAF252B9A660033D359 /* PlacesUseCases.swift in Sources */,
+				56D09D7A252C95EC0025A043 /* ProfileViewModel.swift in Sources */,
 				566D4CAB252B986F0033D359 /* PlacesDataSource.swift in Sources */,
 				566D4CA7252B8C980033D359 /* TermsAndConditionsViewController.swift in Sources */,
 				566D4CA5252B8AAB0033D359 /* ProfileViewController.swift in Sources */,
+				56F27051252C737E00960CB3 /* LoginViewModel.swift in Sources */,
 				566D4CB1252B9B210033D359 /* MoyaPlacesDataSource.swift in Sources */,
 				566D4C8F252B81700033D359 /* AppDelegate.swift in Sources */,
+				56F2704C252C6FBD00960CB3 /* LocalData.swift in Sources */,
 				563910CD252BB21A00169EDA /* HomeViewModel.swift in Sources */,
 				563910C5252BACA600169EDA /* PlacesApis.swift in Sources */,
 				56F27046252BD42C00960CB3 /* PlaceTableViewCell.swift in Sources */,
+				56D09D7D252C96000025A043 /* ProfileUseCases.swift in Sources */,
 				566D4CAD252B98BF0033D359 /* PlacesResponse.swift in Sources */,
 				566D4C91252B81700033D359 /* SceneDelegate.swift in Sources */,
-				56F27043252BCC8000960CB3 /* MapViewController.swift in Sources */,
 				563910C7252BAD0E00169EDA /* Constants.swift in Sources */,
+				56F2704A252C01D500960CB3 /* LoginAndRegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

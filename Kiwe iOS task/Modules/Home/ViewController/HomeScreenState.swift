@@ -9,13 +9,13 @@
 import Foundation
 
 enum HomeScreenState{
-    case Success
+    case Success(places:[Venue])
     case Failure
     case Loading
     
     static func toState(response:PlacesResponse)->HomeScreenState{
         if response.meta.code == 200 {
-            return .Success
+            return .Success(places: response.response.venues)
         }else{
             return .Failure
         }

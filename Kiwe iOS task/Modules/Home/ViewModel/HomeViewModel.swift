@@ -12,12 +12,14 @@ import RxSwift
 class HomeViewModel {
     
     private let useCases = PlacesUseCases()
+    private var latitude = ""
+    private var longitude = ""
 
     private let disposeBag = DisposeBag()
     let homeStateBehaviorSubject = BehaviorSubject<HomeScreenState>(value: .Loading)
     
-    func getPlaces(latitude:String,longitude:String){
-        useCases.getPlaces(latitude: "\(latitude)", longitude: "\(longitude)").subscribe(onSuccess: { (screenState) in
+    func getPlaces(){
+        useCases.getPlaces().subscribe(onSuccess: { (screenState) in
             self.homeStateBehaviorSubject.onNext(screenState)
         }) { [weak self](error) in
             self?.homeStateBehaviorSubject.onNext(.Failure)

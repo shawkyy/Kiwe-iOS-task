@@ -12,26 +12,13 @@ import RxSwift
 
 class MoyaPlacesDataSource: PlacesDataSource {
     
-    private let provider = MoyaProvider<PlacesApis>(plugins:[VerbosePlugin(verbose: true)])
+    private let provider = MoyaProvider<PlacesApis>(plugins:[NetworkLoggerPlugin()])
     
-    func getPlaces(latitude:String, longitude: String) -> Single<PlacesResponse> {
-        return provider.rx.request(.getPlaces(latitude: latitude, longitude: longitude)).map({
+    func getPlaces(location:String) -> Single<PlacesResponse> {
+        return provider.rx.request(.getPlaces(location: location)).map({
             try JSONDecoder().decode(PlacesResponse.self, from: $0.data)
         })
         
     }
 }
 
-struct VerbosePlugin: PluginType {
-    let verbose: Bool
-
-    func prepare(_ request: URLRequest, target: TargetType) -> URLRequest {
-        #if DEBUG
-        if let body = request.httpBody,
-           let str = String(data: body, encoding: .utf8) {
-            print("request to send: \(str))")
-        }
-        #endif
-        return request
-    }
-}

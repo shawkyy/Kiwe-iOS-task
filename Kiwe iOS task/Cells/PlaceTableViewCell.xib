@@ -32,13 +32,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Uvu-xO-1KX">
-                                <rect key="frame" x="0.0" y="61" width="200.5" height="71"/>
+                                <rect key="frame" x="0.0" y="61" width="141.5" height="71"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="agu-jv-3c1">
-                                        <rect key="frame" x="0.0" y="6.5" width="109" height="58"/>
+                                        <rect key="frame" x="0.0" y="10.5" width="50" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="3GV-kS-bcl"/>
+                                            <constraint firstAttribute="width" constant="50" id="k4z-2z-mJy"/>
+                                        </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hS0-Bh-G5o">
-                                        <rect key="frame" x="117" y="25.5" width="83.5" height="20.5"/>
+                                        <rect key="frame" x="58" y="25.5" width="83.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>

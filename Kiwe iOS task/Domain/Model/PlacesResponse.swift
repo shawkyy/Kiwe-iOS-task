@@ -16,93 +16,77 @@ struct PlacesResponse: Codable {
 struct Meta: Codable {
     let code: Int
     let requestID: String
-
+    
     enum CodingKeys: String, CodingKey {
         case code
-        case requestID
+        case requestID = "requestId"
     }
 }
 
+// MARK: - Response
 struct Response: Codable {
     let venues: [Venue]
     let confident: Bool
 }
 
+// MARK: - Venue
 struct Venue: Codable {
     let id, name: String
     let location: Location
     let categories: [Category]
-    let referralID: ReferralID
+    let referralID: String
     let hasPerk: Bool
-
+    let venuePage: VenuePage?
+    
     enum CodingKeys: String, CodingKey {
         case id, name, location, categories
-        case referralID
-        case hasPerk
+        case referralID = "referralId"
+        case hasPerk, venuePage
     }
 }
 
+// MARK: - Category
 struct Category: Codable {
     let id, name, pluralName, shortName: String
     let icon: Icon
     let primary: Bool
 }
 
+// MARK: - Icon
 struct Icon: Codable {
     let iconPrefix: String
-    let suffix: Suffix
-
+    let suffix: String
+    
     enum CodingKeys: String, CodingKey {
-        case iconPrefix
+        case iconPrefix = "prefix"
         case suffix
     }
 }
 
-enum Suffix: String, Codable {
-    case png = ".png"
-}
-
+// MARK: - Location
 struct Location: Codable {
-    let address: String?
+    let address, crossStreet: String?
     let lat, lng: Double
-    let labeledLatLngs: [LabeledLatLng]
+    let labeledLatLngs: [LabeledLatLng]?
     let distance: Int
     let postalCode: String?
-    let cc: Cc
-    let city: City?
-    let state: State?
-    let country: Country
+    let cc: String
+    let neighborhood: String?
+    let city: String
+    let state: String
+    let country: String
     let formattedAddress: [String]
-    let crossStreet: String?
 }
 
-enum Cc: String, Codable {
-    case ccIN = "IN"
-}
 
-enum City: String, Codable {
-    case ahmedabad = "Ahmedabad"
-    case ahmedabaf = "Ahmedabaf"
-    case vadodara = "vadodara"
-}
-
-enum Country: String, Codable {
-    case india = "India"
-}
-
+// MARK: - LabeledLatLng
 struct LabeledLatLng: Codable {
-    let label: Label
+    let label: String
     let lat, lng: Double
 }
 
-enum Label: String, Codable {
-    case display = "display"
-}
 
-enum State: String, Codable {
-    case gujarāt = "Gujarāt"
-}
-
-enum ReferralID: String, Codable {
-    case v1601920959 = "v-1601920959"
+// MARK: - VenuePage
+struct VenuePage: Codable {
+    let id: String
 }

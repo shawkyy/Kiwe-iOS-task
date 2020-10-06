@@ -9,7 +9,7 @@
 import UIKit
 
 class SideMenuViewController: UITableViewController {
-
+    
     @IBOutlet var sideMenuTableView: UITableView!
     
     override func viewDidLoad() {
@@ -26,12 +26,14 @@ class SideMenuViewController: UITableViewController {
         case 0:
             dismiss(animated: true, completion: nil)
         case 1:
-            let homeViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileViewController")
-            self.navigationController?.pushViewController(homeViewController, animated: true)
+            let profileViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileViewController")
+            self.navigationController?.pushViewController(profileViewController, animated: true)
         case 2:
-            break
+            let termsAndConditionsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TermsAndConditionsViewController")
+            self.navigationController?.pushViewController(termsAndConditionsVC, animated: true)
         case 3:
-            break
+            let signInViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "LoginAndRegisterViewController")
+            UIApplication.shared.keyWindow?.rootViewController = signInViewController
         default:
             break
         }

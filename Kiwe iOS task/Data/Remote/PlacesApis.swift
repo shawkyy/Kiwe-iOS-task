@@ -10,7 +10,7 @@ import Foundation
 import Moya
 
 enum PlacesApis{
-    case getPlaces(latitude:String,longitude:String)
+    case getPlaces(location:String)
 }
 
 extension PlacesApis: TargetType{
@@ -39,10 +39,9 @@ extension PlacesApis: TargetType{
     
     var task: Task {
         switch self {
-        case .getPlaces(latitude: let latitude, longitude: let longitude):
+        case .getPlaces(location: let location):
             return .requestParameters(parameters: [
-//                "ll":"\(latitude),\(longitude)",
-                "ll":"23.0340847,72.5084728",
+                "ll":"\(location)",
                 "client_id":"4EQRZPSGKBZGFSERGJY055FRW2OSPJRZYR4C3J0JN2CQQFIV",
                 "client_secret":"AJR4B5LLRONWAJWJJOACHAFLCWS2YJAZMGQNFFZQP0IB3THR",
                 "v":"20180910"

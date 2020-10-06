@@ -10,5 +10,5 @@ import Foundation
 import RxSwift
 
 protocol PlacesDataSource {
-    func getPlaces(latitude:String, longitude:String)->Single<PlacesResponse>
+    func getPlaces(location:String)->Single<PlacesResponse>
 }

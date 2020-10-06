@@ -9,12 +9,16 @@ target 'Kiwe iOS task' do
   pod 'SideMenu', '~> 6.4.8'
   pod 'IQKeyboardManagerSwift', '6.3.0'
   pod 'PKHUD', '~> 5.3.0'
+  pod 'Kingfisher', '~> 4.0'
 
 # Networking libraries
-pod 'Moya/RxSwift', '~> 14.0'
+  pod 'Moya/RxSwift', '~> 14.0'
 
-#Maps library
-pod 'GoogleMaps', '3.9.0'
-pod 'GooglePlaces', '3.9.0'
+#Maps libraries
+  pod 'GoogleMaps', '3.9.0'
+  pod 'GooglePlaces', '3.9.0'
+
+#Helpers libraries
+  pod 'Locksmith'
 
 end

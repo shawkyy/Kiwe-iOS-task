@@ -17,7 +17,8 @@ class PlacesUseCases {
         self.dataSource = MoyaPlacesDataSource()
     }
     
-    func getPlaces(latitude:String, longitude:String)->Single<HomeScreenState>{
-        dataSource.getPlaces(latitude: latitude, longitude: longitude).map({HomeScreenState.toState(response: $0)})
+    func getPlaces()->Single<HomeScreenState>{
+        let location = LocalData.retrieveLocation()
+       return dataSource.getPlaces(location: location).map({HomeScreenState.toState(response: $0)})
     }
 }

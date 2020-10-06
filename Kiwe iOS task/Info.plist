@@ -3,9 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>sss</string>
+	<string>Kiwe wants to know your location</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Kiwe wants to know your locations</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>sadada</string>
+	<string>Kiwe wants to know your locations</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
