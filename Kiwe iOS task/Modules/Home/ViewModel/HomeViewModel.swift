@@ -11,10 +11,7 @@ import RxSwift
 
 class HomeViewModel {
     
-    private let useCases = PlacesUseCases()
-    private var latitude = ""
-    private var longitude = ""
-
+    private let useCases = PlacesUseCases() 
     private let disposeBag = DisposeBag()
     let homeStateBehaviorSubject = BehaviorSubject<HomeScreenState>(value: .Loading)
     

@@ -46,6 +46,7 @@ class LoginAndRegisterViewController: UIViewController {
         super.viewDidLoad()
         loginButtonOutlet.layer.cornerRadius = loginButtonOutlet.bounds.height / 2
         registerButtonOutlet.layer.cornerRadius = registerButtonOutlet.bounds.height / 2
+        ageTextField.delegate = self
         handleScreenSelection()
     }
     
@@ -110,5 +111,18 @@ class LoginAndRegisterViewController: UIViewController {
         //validate password
         viewModel.registerUser(userName: name, password: password, age: age, email: email)
         navigateToHome()
+    }
+}
+
+extension LoginAndRegisterViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        let age = Int(textField.text ?? "") ?? 0
+        if textField == ageTextField{
+            if age < 18 {
+                let alert = UIAlertController(title: "Sorry", message: "age should be above 18", preferredStyle: .alert)
+                alert.addAction(.init(title: "Ok", style: .cancel, handler: nil ))
+                present(alert, animated: true, completion: nil)
+            }
+        }
     }
 }

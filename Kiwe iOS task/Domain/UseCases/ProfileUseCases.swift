@@ -13,7 +13,6 @@ class ProfileUseCases {
     func getUserData()->(name:String,age:String,email:String)?{
         let userEmail = LocalData.retrieveUserEmail()
         let userAccount = LocalData.retrieveUserAccount(email: userEmail)
-      
         return ("\(userAccount?["name"] ?? "")","\(userAccount?["age"] ?? "")",userEmail)
     }
     

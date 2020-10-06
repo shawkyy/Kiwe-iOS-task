@@ -23,13 +23,11 @@ struct Meta: Codable {
     }
 }
 
-// MARK: - Response
 struct Response: Codable {
     let venues: [Venue]
     let confident: Bool
 }
 
-// MARK: - Venue
 struct Venue: Codable {
     let id, name: String
     let location: Location
@@ -45,14 +43,12 @@ struct Venue: Codable {
     }
 }
 
-// MARK: - Category
 struct Category: Codable {
     let id, name, pluralName, shortName: String
     let icon: Icon
     let primary: Bool
 }
 
-// MARK: - Icon
 struct Icon: Codable {
     let iconPrefix: String
     let suffix: String
@@ -63,7 +59,6 @@ struct Icon: Codable {
     }
 }
 
-// MARK: - Location
 struct Location: Codable {
     let address, crossStreet: String?
     let lat, lng: Double
@@ -79,14 +74,12 @@ struct Location: Codable {
 }
 
 
-// MARK: - LabeledLatLng
 struct LabeledLatLng: Codable {
     let label: String
     let lat, lng: Double
 }
 
 
-// MARK: - VenuePage
 struct VenuePage: Codable {
     let id: String
 }

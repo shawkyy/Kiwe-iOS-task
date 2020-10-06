@@ -38,6 +38,4 @@ struct LocalData  {
     static func retrieveLocation()->String{
         UserDefaults.standard.string(forKey: "location") ?? ""
     }
-    
-    
 }

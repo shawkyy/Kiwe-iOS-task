@@ -144,7 +144,6 @@ extension HomeViewController:UITableViewDataSource {
         
         return cell
     }
-    
 }
 
 extension HomeViewController: GMSMapViewDelegate{
